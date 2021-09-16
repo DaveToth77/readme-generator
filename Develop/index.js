@@ -1,14 +1,19 @@
-// TODO: Include packages needed for this application
-const inquirer = require('inquirer');
-const fs = require('fs');
 
-// TODO: Create an array of questions for user input
-const promptUser = () => {
+const inquirer = require('inquirer');
+const generateMarkdown = require('./src/page-template');
+const writeFile = require('./utils/generateMarkdown')
+    
+const promptUser = readmeData => {
     console.log(`
     =======================
     Let's make your README!
     =======================
     `);
+    //make sure the array is empty
+    if(!readmeData) {
+        readmeData =[];
+    }
+    //Question
     return inquirer.prompt([{
         type: 'input',
         name: 'projectTitle',
@@ -35,67 +40,69 @@ const promptUser = () => {
             }
         }
     },
-    {
-        type: 'confirm',
-        name: 'confirmInstallation',
-        message: 'Would you like to enter installation instructions for your project?',
-        default: true
-    },
+
+    //! leave confirm statements for future upgrade
+    // {
+    //     type: 'confirm',
+    //     name: 'confirmInstallation',
+    //     message: 'Would you like to enter installation instructions for your project?',
+    //     default: true
+    // },
     {
         type: 'input',
         name: 'installation',
         message: 'Please enter installation instructions for your project',
-        when: ({
-            confirmInstallation
-        }) => confirmInstallation
+        // when: ({
+        //     confirmInstallation
+        // }) => confirmInstallation
     },
-    {
-        type: 'confirm',
-        name: 'confirmUsage',
-        message: 'Would you like to enter usage information for your project?',
-        default: true
-    },
+    // {
+    //     type: 'confirm',
+    //     name: 'confirmUsage',
+    //     message: 'Would you like to enter usage information for your project?',
+    //     default: true
+    // },
     {
         type: 'input',
         name: 'usage',
         message: 'Please enter usage information for your project',
-        when: ({
-            confirmUsage
-        }) => confirmUsage
+        // when: ({
+        //     confirmUsage
+        // }) => confirmUsage
     },
-    {
-        type: 'confirm',
-        name: 'confirmContribution',
-        message: 'Would you like to enter enter contribution guidelines for your project?',
-        default: true
-    },
+    // {
+    //     type: 'confirm',
+    //     name: 'confirmContribution',
+    //     message: 'Would you like to enter enter contribution guidelines for your project?',
+    //     default: true
+    // },
     {
         type: 'input',
         name: 'contribution',
         message: 'Please enter contribution guidelines for your project',
-        when: ({
-            confirmContribution
-        }) => confirmContribution
+        // when: ({
+        //     confirmContribution
+        // }) => confirmContribution
     },
-    {
-        type: 'confirm',
-        name: 'confirmTest',
-        message: 'Would you like to enter any test instructions for your project?',
-        default: true
-    },
+    // {
+    //     type: 'confirm',
+    //     name: 'confirmTest',
+    //     message: 'Would you like to enter any test instructions for your project?',
+    //     default: true
+    // },
     {
         type: 'input',
         name: 'test',
         message: 'Please enter any test instructions for your project',
-        when: ({
-            confirmTest
-        }) => confirmTest
+        // when: ({
+        //     confirmTest
+        // }) => confirmTest
     },
     {
         type: 'checkbox',
         name: 'license',
         message: 'Please choose the applicable license(s)',
-        choices: ['MIT', 'Apache', 'GPL']
+        choices: ['MIT', 'Apache', 'GNU']
     },
     {
         type: 'input',
@@ -110,53 +117,37 @@ const promptUser = () => {
             }
         }
     },
-    {
-        type: 'confirm',
-        name: 'confirmEmail',
-        message: 'Would you like to enter enter your email address?',
-        default: true
-    },
+    // {
+    //     type: 'confirm',
+    //     name: 'confirmEmail',
+    //     message: 'Would you like to enter enter your email address?',
+    //     default: true
+    // },
 
     {
         type: 'input',
         name: 'email',
         message: 'Please enter your email address',
-        when: ({
-            confirmEmail
-        }) => confirmEmail
-    },
-])}
-// TODO: Create a function to write README file
-// const writeFile = fileContent => {
-//     return new Promise((resolve, reject) => {
-//         fs.writeFile('./dist/README.md', fileContent, err => {
-//             if (err) {
-//                 reject(err);
-//                 return;
-//             }
-
-//             resolve({
-//                 ok: true,
-//                 message: 'File created!'
-//             });
-//         });
-//     });
-// };
-// TODO: Create a function to initialize app
-// function init() {}
-
-// Function call to initialize app
-// init();
-
-
-promptUser();
-
-// const printProfileData = (profileDataArr) => {
-//     console.log(profileDataArr);
-//   };
-  
-//   printProfileData(profileDataArgs);
-
-//   module.exports = {
-//     writeFile,
-// };
+        // when: ({
+        //     confirmEmail
+        // }) => confirmEmail
+    }
+])
+.then(readmeData => {
+    return readmeData;
+})
+}
+//execute function
+promptUser()
+    .then(readmeData => {
+        return generateMarkdown(readmeData);
+    })
+    .then(pageMarkdown => {
+        return writeFile(pageMarkdown);
+    })
+    .then(writeFileResponse => {
+        console.log(writeFileResponse);
+    })
+    .catch( err => {
+        console.log(err);
+    })
