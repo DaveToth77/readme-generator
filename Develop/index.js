@@ -36,43 +36,66 @@ const promptUser = () => {
         }
     },
     {
+        type: 'confirm',
+        name: 'confirmInstallation',
+        message: 'Would you like to enter installation instructions for your project?',
+        default: true
+    },
+    {
         type: 'input',
         name: 'installation',
         message: 'Please enter installation instructions for your project',
-        // when: ({
-        //     confirmInstallation
-        // }) => confirmInstallation
+        when: ({
+            confirmInstallation
+        }) => confirmInstallation
+    },
+    {
+        type: 'confirm',
+        name: 'confirmUsage',
+        message: 'Would you like to enter usage information for your project?',
+        default: true
     },
     {
         type: 'input',
         name: 'usage',
         message: 'Please enter usage information for your project',
-        // when: ({
-        //     confirmUsage
-        // }) => confirmUsage
+        when: ({
+            confirmUsage
+        }) => confirmUsage
+    },
+    {
+        type: 'confirm',
+        name: 'confirmContribution',
+        message: 'Would you like to enter enter contribution guidelines for your project?',
+        default: true
     },
     {
         type: 'input',
         name: 'contribution',
         message: 'Please enter contribution guidelines for your project',
-        // when: ({
-        //     confirmContribution
-        // }) => confirmContribution
+        when: ({
+            confirmContribution
+        }) => confirmContribution
+    },
+    {
+        type: 'confirm',
+        name: 'confirmTest',
+        message: 'Would you like to enter any test instructions for your project?',
+        default: true
     },
     {
         type: 'input',
         name: 'test',
         message: 'Please enter any test instructions for your project',
-        // when: ({
-        //     confirmTest
-        // }) => confirmTest
+        when: ({
+            confirmTest
+        }) => confirmTest
     },
     {
         type: 'checkbox',
         name: 'license',
         message: 'Please choose the applicable license(s)',
         choices: ['MIT', 'Apache', 'GPL']
-
     },
     {
         type: 'input',
@@ -88,21 +111,52 @@ const promptUser = () => {
         }
     },
     {
+        type: 'confirm',
+        name: 'confirmEmail',
+        message: 'Would you like to enter enter your email address?',
+        default: true
+    },
+
+    {
         type: 'input',
         name: 'email',
         message: 'Please enter your email address',
-        // when: ({
-        //     confirmEmail
-        // }) => confirmEmail
+        when: ({
+            confirmEmail
+        }) => confirmEmail
     },
 ])}
-// // TODO: Create a function to write README file
-const generatePage = () => 
-// // TODO: Create a function to initialize app
+// TODO: Create a function to write README file
+// const writeFile = fileContent => {
+//     return new Promise((resolve, reject) => {
+//         fs.writeFile('./dist/README.md', fileContent, err => {
+//             if (err) {
+//                 reject(err);
+//                 return;
+//             }
+
+//             resolve({
+//                 ok: true,
+//                 message: 'File created!'
+//             });
+//         });
+//     });
+// };
+// TODO: Create a function to initialize app
 // function init() {}
 
-// // Function call to initialize app
+// Function call to initialize app
 // init();
 
 
 promptUser();
+
+// const printProfileData = (profileDataArr) => {
+//     console.log(profileDataArr);
+//   };
+  
+//   printProfileData(profileDataArgs);
+
+//   module.exports = {
+//     writeFile,
+// };
