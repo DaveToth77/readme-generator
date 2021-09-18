@@ -16,6 +16,7 @@
 <a href="#contact">Contact Info</a> •
 <a href="#-support">🤝 Support</a> 
 </p>
+<img width="1741" alt="Screen Shot 2021-09-18 at 12 08 09 PM" src="https://user-images.githubusercontent.com/85111342/133895207-4df18884-b5a8-48b5-9568-d2b9f3eb7fa8.png">
 
 ## Installation Instructions 
 Run "npm i" to install dependencies. Run "node index" to launch the readme-generator program.
