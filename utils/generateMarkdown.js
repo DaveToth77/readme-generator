@@ -8,7 +8,7 @@ const fs = require('fs');
                 reject(err);
                 return;
             }
-            resolve('README.md file created!');
+            resolve('File created! Look in the dist folder for your new README');
         });
     });
 };

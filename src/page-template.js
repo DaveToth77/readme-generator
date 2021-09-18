@@ -6,18 +6,20 @@ module.exports = data => {
 
 ![license](https://img.shields.io/badge/License-${data.license}-orange.svg)
 
-#${data.projectTitle}
+<h1 align="center">${data.projectTitle}</h1>
 
-#${data.projectDescription}
+<p align="center">${data.projectDescription}</p>
  
-- [Table of Contents](#table-of-contents)
-- [Installation Instructions](#installation-instructions)
-- [Usage Information](#usage-information)
-- [Contribution Guidelines](#contribution-guidelines)
-- [Test Instructions](#test-instructions)
-- [Licenses](#licenses)
-- [Contact](#contact)
-- [🤝 Support](#-support)
+<p align="center">
+<a href="#installation-instructions">Installation</a> •
+<a href="#usage-information">Usage</a> •
+<a href="#contribution-guidelines">Contribute</a> •
+<a href="#test-instructions">Testing</a> •
+<a href="#licenses">License</a> •
+<a href="#questions">Questions</a> •
+<a href="#contact">Contact Info</a> •
+<a href="#-support">🤝 Support</a> 
+</p>
 
 ## Installation Instructions 
 ${data.installation}
@@ -26,7 +28,7 @@ ${data.usage}
 ## Contribution Guidelines
 ${data.contribution}
 ## Test Instructions
-${data.test}
+${data.test}cd ..
 ## Licenses
 ${data.license.map(license => license).join(',')}
 
