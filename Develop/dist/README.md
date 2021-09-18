@@ -1,37 +1,40 @@
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](undefined)
-#README Generator
+<h1 align="center">sdfsdf</h1>
 
-#A readme generator using node to build a README file based on responses to questions asked through the command line.
+<p align="center">sdfsdf</p>
  
-- [Installation Instructions](#installation-instructions)
-- [Usage Information](#usage-information)
-- [Contribution Guidelines](#contribution-guidelines)
-- [Test Instructions](#test-instructions)
-- [Licenses](#licenses)
-- [Questions](#questions)
-- [🤝 Support](#-support)
+<p align="center">
+<a href="#installation-instructions">Installation</a> •
+<a href="#usage-information">Usage</a> •
+<a href="#contribution-guidelines">Contribute</a> •
+<a href="#test-instructions">Testing</a> •
+<a href="#licenses">License</a> •
+<a href="#licenses"></a> •
+<a href="#contact">Contact Info</a> •
+<a href="#-support">🤝 Support</a> 
+</p>
 
-## Installation Instructions 
-npm install
-## Usage Information
-Enter node index in the command line to begin the program. Answer the questions as thoroughly as possible to create a quality README. When complete, your README file will be in the didtribution folder. Copy, Paste and have a great day! 
-## Contribution Guidelines
-Please submit issues and pull requests to contribute.
-## Test Instructions
-npm test
-## Licenses
-Apache
+<h2 align="center"> Installation Instructions</h2>
+sdfsdf
+<h2 align="center"> Usage Information</h2>
+sdfsdf
+<h2 align="center"> Contribution Guidelines</h2>
+sdfsdfdsf
+<h2 align="center"> Test Instructions</h2>
+sdfsdf
+<h2 align="center"> Licenses
+MIT,Apache</h2>
 
 
-## Questions
+<h2 align="center"> Questions</h2>
 
-- [Github](https://github.com/davetoth77 "davetoth77")
-- [Email](mailto:dtoth77@gmail.com?subject=Hi "Hi!")
+- [Github](https://github.com/sdfsdf "sdfsdf")
+- [Email](mailto:sdfsdfd?subject=Hi "Hi!")
 
-## 🤝 Support
+<h2 align="center"> 🤝 Support</h2>
 
-Contributions, issues, and feature requests are welcome!
+<p align="center">Contributions, issues, and feature requests are welcome!</p>
 
-Give a ⭐️  if you like this project!
+<p align="center">Give a ⭐️  if you like this project!</p>
   
