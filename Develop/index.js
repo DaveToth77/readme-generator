@@ -13,7 +13,7 @@ const promptUser = readmeData => {
     if(!readmeData) {
         readmeData =[];
     }
-    //Question
+    //Questions start
     return inquirer.prompt([{
         type: 'input',
         name: 'projectTitle',
@@ -137,7 +137,9 @@ const promptUser = readmeData => {
     return readmeData;
 })
 }
-//execute function
+// Questions end
+
+//Execute function
 promptUser()
     .then(readmeData => {
         return generateMarkdown(readmeData);

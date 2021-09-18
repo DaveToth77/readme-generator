@@ -1,15 +1,14 @@
+module.exports = data => {
 
-module.exports = templateData => {
+  console.log(data);
 
-    console.log(templateData);
+  return `
 
-    return `
+![license](https://img.shields.io/badge/License-${data.license}-orange.svg)
 
-![license](https://img.shields.io/badge/License-${templateData.license}-orange.svg)
+#${data.projectTitle}
 
-#${templateData.projectTitle}
-
-#${templateData.projectDescription}
+#${data.projectDescription}
  
 - [Table of Contents](#table-of-contents)
 - [Installation Instructions](#installation-instructions)
@@ -21,28 +20,27 @@ module.exports = templateData => {
 - [🤝 Support](#-support)
 
 ## Installation Instructions 
-${templateData.installation}
+${data.installation}
 ## Usage Information
-${templateData.usage}
+${data.usage}
 ## Contribution Guidelines
-${templateData.contribution}
+${data.contribution}
 ## Test Instructions
-${templateData.test}
+${data.test}
 ## Licenses
-${templateData.license.map(license => license).join(',')}
+${data.license.map(license => license).join(',')}
 
 
 ## Questions
 
-- [Github](https://github.com/${templateData.githubUser} "${templateData.githubUser}")
-- [Email](mailto:${templateData.email}?subject=Hi "Hi!")
+- [Github](https://github.com/${data.githubUser} "${data.githubUser}")
+- [Email](mailto:${data.email}?subject=Hi "Hi!")
 
 ## 🤝 Support
 
 Contributions, issues, and feature requests are welcome!
 
 Give a ⭐️  if you like this project!
-  `  
-    
-}
+  `
 
+}

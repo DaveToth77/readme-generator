@@ -8,14 +8,9 @@ const fs = require('fs');
                 reject(err);
                 return;
             }
-
-            resolve({
-                ok: true,
-                message: 'File created!'
-            });
+            resolve('README.md file created!');
         });
     });
 };
-
-
+//export file to index.js
 module.exports = writeFile;
