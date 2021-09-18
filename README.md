@@ -1,26 +1,32 @@
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](undefined)
-#README Generator
 
-#A readme generator using node to build a README file based on responses to questions asked through the command line.
+
+![license](https://img.shields.io/badge/License-MIT-orange.svg)
+
+<h1 align="center">Readme Generator Pro</h1>
+
+<p align="center">A command-line application that dynamically generates a professional README.md file from a user's input using the Inquirer package.</p>
  
-- [Installation Instructions](#installation-instructions)
-- [Usage Information](#usage-information)
-- [Contribution Guidelines](#contribution-guidelines)
-- [Test Instructions](#test-instructions)
-- [Licenses](#licenses)
-- [Questions](#questions)
-- [🤝 Support](#-support)
+<p align="center">
+<a href="#installation-instructions">Installation</a> •
+<a href="#usage-information">Usage</a> •
+<a href="#contribution-guidelines">Contribute</a> •
+<a href="#test-instructions">Testing</a> •
+<a href="#licenses">License</a> •
+<a href="#questions">Questions</a> •
+<a href="#contact">Contact Info</a> •
+<a href="#-support">🤝 Support</a> 
+</p>
 
 ## Installation Instructions 
-npm install
+Run "npm i" to install dependencies. Run "node index" to launch the readme-generator program.
 ## Usage Information
-Enter node index in the command line to begin the program. Answer the questions as thoroughly as possible to create a quality README. When complete, your README file will be in the didtribution folder. Copy, Paste and have a great day! 
+Answer the prompted questions as thoroughly as possible to create a great README.
 ## Contribution Guidelines
-Please submit issues and pull requests to contribute.
+To contribute add an issue or enter a pull request.
 ## Test Instructions
-npm test
+N/A
 ## Licenses
-Apache
+MIT
 
 
 ## Questions
@@ -33,3 +39,4 @@ Apache
 Contributions, issues, and feature requests are welcome!
 
 Give a ⭐️  if you like this project!
+  
