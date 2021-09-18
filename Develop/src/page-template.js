@@ -2,13 +2,11 @@
 module.exports = templateData => {
 
     console.log(templateData);
-    //add license badge to top of README
 
-    let license = templateData.license === 'MIT' ? "[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)]" : templateData.license === 'GNU' ? 
-    "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)]" : "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]"
-    // README template
     return `
-${license}(${templateData.html_url})
+
+![license](https://img.shields.io/badge/License-${templateData.license}-orange.svg)
+
 #${templateData.projectTitle}
 
 #${templateData.projectDescription}
